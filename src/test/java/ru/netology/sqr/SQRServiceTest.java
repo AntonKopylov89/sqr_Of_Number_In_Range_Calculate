@@ -7,13 +7,13 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 
 public class SQRServiceTest {
-  @ParameterizedTest
-  @CsvFileSource(resources = {"/testdata.csv"})
+    @ParameterizedTest
+    @CsvFileSource(resources = {"/testdata.csv"})
 
-  public void test(int min, int max, int expected) {
-    SQRService service = new SQRService();
-    int actual = service.sqrOfNumbInRange(min, max);
+    public void test(int min, int max, int expected) {
+        SQRService service = new SQRService();
+        int actual = service.sqrOfNumbInRange(min, max);
 
-    Assertions.assertEquals(expected, actual);
-  }
+        Assertions.assertEquals(expected, actual);
+    }
 }
